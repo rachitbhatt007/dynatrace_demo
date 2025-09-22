@@ -45,7 +45,7 @@ jobs:
           fi
         done
         
-        echo "✅ All file extensions are valid"
+        echo " All file extensions are valid"
 
   python-syntax-check:
     name: Python Syntax Check
@@ -72,9 +72,9 @@ jobs:
           echo "Checking syntax for $file"
           python -m py_compile $file
           if [ $? -ne 0 ]; then
-            echo "❌ Syntax error in $file"
+            echo " Syntax error in $file"
             exit 1
           fi
         done
         
-        echo "✅ All Python files have valid syntax"
+        echo " All Python files have valid syntax"
