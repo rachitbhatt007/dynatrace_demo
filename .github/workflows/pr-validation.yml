@@ -99,11 +99,6 @@ jobs:
                 pip install pytest pytest-cov
                 if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-        -    name: Run unit tests
-             run: |
-                    echo "Running unit tests..."
-                    python -m pytest core/ -v --cov=core --cov-report=term-missing
-                    python -m pytest utilities/ -v --cov=utilities --cov-report=term-missing
 
         -   name: Test with pytest (all tests)
             run: |
